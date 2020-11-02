@@ -1,26 +1,17 @@
 const express = require('express');
+
+const middleware = require('./middlewares');
+
+const routes = require('./routes');
+
 const app = express();
 
-
 // middleware
-app.use((req, res, next) => {
-    console.log(req.ip);
-    next();
-});
+middleware(app);
 
-app.get(('/'), (req, res, next) => {
-    res.send('Welcome to the hompage');
-});
+// routes
+routes(app);
 
-
-app.get('/user/:id/:postId', (req, res, next) => {
-    // localhost:5000/user/1/10?comment=first&like=first
-    console.log(req.params); // {id : '1', postId:'10'}
-    console.log(req.query);// {comment : 'first', like:'first'}
-    const host  = req.get('host');
-    console.log(host);
-    res.send('Welcome to user page');
-})
 
 
 module.exports = app;
