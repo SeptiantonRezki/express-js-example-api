@@ -2,15 +2,17 @@ const express = require('express');
 const app = express();
 
 
-app.get(('/'),(req, res, next) => {
-    // res.send('Welcome to the hompage');
-    // res.status(200).send('Welcome to the hompage'); => statis 200 succes 400 error 500 internal server error
-    res.json({
-        message : "welcome to homepe"
-    });
-    res.redirect('/user');
+app.get(('/'), (req, res, next) => {
+    res.send('Welcome to the hompage');
 });
-app.get('/user', (req, res, next) => {
+
+
+app.get('/user/:id/:postId', (req, res, next) => {
+    // localhost:5000/user/1/10?comment=first&like=first
+    console.log(req.params); // {id : '1', postId:'10'}
+    console.log(req.query);// {comment : 'first', like:'first'}
+    const host  = req.get('host');
+    console.log(host);
     res.send('Welcome to user page');
 })
 
