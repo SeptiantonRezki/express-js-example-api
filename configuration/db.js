@@ -7,8 +7,7 @@ const dbCon = (coll, cb) => {
         const db = client.db('sample_mflix').collection(coll);
         await cb(db);
         client.close();
-    })
-    .catch();
+    });
 };
 
 // dbCon('movies', async (db) => {
