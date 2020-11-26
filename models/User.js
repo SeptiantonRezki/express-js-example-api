@@ -5,9 +5,15 @@ class User {
     constructor(userData) {
         this.userData = { ...userData };
     };
-    save() {
-        dbCon('users', (db) => {
-            db.insertOne(this.userData);
+    save(cb) {
+        dbCon('users', async (db) => {
+            try {
+                await db.insertOne(this.userData);
+                cb();
+            } catch (error) {
+                console.log("dijalnakan terlebih dahulu jika tidak error(SEPERTI PENULISANSALAH SINTAKS atau CODE ERROR) || PROSES I");
+                cb(error);
+            }
         });
     };
 

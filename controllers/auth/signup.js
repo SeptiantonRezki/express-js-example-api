@@ -17,7 +17,18 @@ const postSignUp = (req, res, next) => {
             return next(error);
         }
     })
-    .catch(err => next(createError(500)))
+    .catch(err => next(createError(500)));
+
+    user.save((err) => {
+
+        if(err){
+            console.log("ini baru dijalankan setelah callback dipanggil || PROSES 2")
+            return next(createError(500));
+        }
+        res.status(200).send({
+            message : 'User has been successfully created'
+        });
+    });
 };
 
 module.exports = { postSignUp };
