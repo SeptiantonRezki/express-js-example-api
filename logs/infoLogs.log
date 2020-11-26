@@ -30,3 +30,71 @@
 {"message":"::1 - - [25/Nov/2020:13:44:03 +0000] \"GET /comments HTTP/1.1\" 404 23 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
 {"message":"Bad Request","level":"error"}
 {"message":"::1 - - [25/Nov/2020:13:47:01 +0000] \"GET /movies/name HTTP/1.1\" 400 25 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Not Found","level":"error"}
+{"message":"::1 - - [26/Nov/2020:18:58:52 +0000] \"POST /signup HTTP/1.1\" 404 23 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Not Found","level":"error"}
+{"message":"::1 - - [26/Nov/2020:18:59:56 +0000] \"POST /signup HTTP/1.1\" 404 23 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [26/Nov/2020:19:00:20 +0000] \"POST /auth/signup HTTP/1.1\" 200 5 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:00:45 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:01:59 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:04:21 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:04:34 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:04:51 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:04:53 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:04:53 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:04:55 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:04:56 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:05:19 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:06:00 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:07:09 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:11:43 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:12:12 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [26/Nov/2020:19:14:59 +0000] \"POST /auth/signup HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:15:51 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:16:10 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Not Found","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:16:59 +0000] \"POST /auth/signu HTTP/1.1\" 404 23 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Not Found","level":"error"}
+{"message":"::ffff:127.0.0.1 - - [26/Nov/2020:19:18:40 +0000] \"POST /auth/signu HTTP/1.1\" 404 23 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::ffff:127.0.0.1 - - [26/Nov/2020:19:18:44 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:19:22 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:20:21 +0000] \"POST /auth/signup HTTP/1.1\" 500 1258 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validation is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:22:08 +0000] \"POST /auth/signup HTTP/1.1\" 500 47 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validate is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:22:51 +0000] \"POST /auth/signup HTTP/1.1\" 500 45 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validate is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:23:12 +0000] \"POST /auth/signup HTTP/1.1\" 500 45 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"User.validate is not a function","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:23:44 +0000] \"POST /auth/signup HTTP/1.1\" 500 45 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"\"username\" is required","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:25:37 +0000] \"POST /auth/signup HTTP/1.1\" 400 38 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"\"email\" is required","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:26:25 +0000] \"POST /auth/signup HTTP/1.1\" 400 35 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"\"email\" must be a valid email","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:26:49 +0000] \"POST /auth/signup HTTP/1.1\" 400 45 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"\"password\" is required","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:27:16 +0000] \"POST /auth/signup HTTP/1.1\" 400 38 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Your password must at least 8 characters and contain at least one upper case letter, one lower case letter, one number and one special character","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:27:28 +0000] \"POST /auth/signup HTTP/1.1\" 400 158 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Your password must at least 8 characters and contain at least one upper case letter, one lower case letter, one number and one special character","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:28:27 +0000] \"POST /auth/signup HTTP/1.1\" 400 158 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}

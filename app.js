@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 // semua error next akan dihandle disini
 app.use((error, req, res, next) => {
     logger.error(error.message);
-    res.statusCode = error.statusCode;
+    res.statusCode = error.statusCode || 500;
 
     res.json({
         message: error.message

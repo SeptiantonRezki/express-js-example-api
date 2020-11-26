@@ -48,6 +48,8 @@ class User {
     }
 };
 
+module.exports = User;
+
 // const user = new User({
 //     username: 'anasSaber',
 //     email: 'anas@example.com',
@@ -67,19 +69,19 @@ class User {
 // const validation = User.validate(userData);
 // User.validate(userData);
 
-const user = new User({
-    username: 'anassssSaber',
-    email: 'anasssSaber@example.com',
-    password: 'anas1234',
-    first_name: 'Anas',
-    last_name: 'Saber'
-});
-user.checkExistence()
-.then(check => {
-    console.log(check);
-})
-.catch(err => console.log(err));
-;
+// const user = new User({
+//     username: 'anassssSaber',
+//     email: 'anasssSaber@example.com',
+//     password: 'anas1234',
+//     first_name: 'Anas',
+//     last_name: 'Saber'
+// });
+// user.checkExistence()
+// .then(check => {
+//     console.log(check);
+// })
+// .catch(err => console.log(err));
+// ;
 
 
 // node .\models\User.js
