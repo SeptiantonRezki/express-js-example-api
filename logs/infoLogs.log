@@ -98,3 +98,9 @@
 {"message":"::1 - - [26/Nov/2020:19:27:28 +0000] \"POST /auth/signup HTTP/1.1\" 400 158 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
 {"message":"Your password must at least 8 characters and contain at least one upper case letter, one lower case letter, one number and one special character","level":"error"}
 {"message":"::1 - - [26/Nov/2020:19:28:27 +0000] \"POST /auth/signup HTTP/1.1\" 400 158 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Your password must at least 8 characters and contain at least one upper case letter, one lower case letter, one number and one special character","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:38:04 +0000] \"POST /auth/signup HTTP/1.1\" 400 158 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"this username is already in use","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:38:11 +0000] \"POST /auth/signup HTTP/1.1\" 409 45 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"this email is already in use","level":"error"}
+{"message":"::1 - - [26/Nov/2020:19:38:20 +0000] \"POST /auth/signup HTTP/1.1\" 409 42 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}

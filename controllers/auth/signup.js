@@ -1,5 +1,5 @@
 const { User } = require('../../models');
-
+const createError = require('http-errors');
 const postSignUp = (req, res, next) => {
     const validation = User.validate(req.body);
     if(validation.error){
@@ -7,6 +7,17 @@ const postSignUp = (req, res, next) => {
         error.statusCode = 400;
         return next(error);
     }
+    // check existence
+    const user = new User(req.body);
+    user.checkExistence()
+    .then(result => {
+        if(result.check){
+            const error = new Error(result.message);
+            error.statusCode = 409;
+            return next(error);
+        }
+    })
+    .catch(err => next(createError(500)))
 };
 
 module.exports = { postSignUp };
