@@ -157,3 +157,11 @@
 {"message":"::1 - - [27/Nov/2020:18:22:39 +0000] \"POST /auth/login HTTP/1.1\" 200 177 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
 {"message":"::1 - - [27/Nov/2020:18:23:18 +0000] \"POST /auth/login HTTP/1.1\" 200 187 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
 {"message":"::1 - - [27/Nov/2020:18:24:33 +0000] \"POST /auth/login HTTP/1.1\" 200 188 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Unauthorized","level":"error"}
+{"message":"::1 - - [27/Nov/2020:18:39:57 +0000] \"GET /movies/4 HTTP/1.1\" 401 26 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [27/Nov/2020:18:40:30 +0000] \"POST /auth/login HTTP/1.1\" 200 188 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [27/Nov/2020:18:40:34 +0000] \"POST /auth/login HTTP/1.1\" 200 188 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [27/Nov/2020:18:41:16 +0000] \"GET /movies/4 HTTP/1.1\" 200 15476 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [27/Nov/2020:18:43:50 +0000] \"GET /movies/4 HTTP/1.1\" 200 15476 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Unauthorized","level":"error"}
+{"message":"::1 - - [27/Nov/2020:18:44:20 +0000] \"GET /movies/4 HTTP/1.1\" 401 26 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
