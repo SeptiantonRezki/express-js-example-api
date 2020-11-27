@@ -8,10 +8,17 @@ const schema = Joi.object({
     password: Joi.string().pattern(
         new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')
     )
-    .message('Your password must at least 8 characters and contain at least one upper case letter, one lower case letter, one number and one special character')
-    .required(),
+        .message('Your password must at least 8 characters and contain at least one upper case letter, one lower case letter, one number and one special character')
+        .required(),
     first_name: Joi.string().required(),
     last_name: Joi.string().required()
 });
 
-module.exports = schema;
+const logSchema = Joi.object({
+    username: Joi.string().required(),
+    password: Joi.string().required()
+})
+
+module.exports = { 
+    schema, logSchema 
+};

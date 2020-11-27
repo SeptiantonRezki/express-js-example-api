@@ -1,5 +1,6 @@
 const { dbCon } = require('../configuration');
-const { userValidator } = require('../validator');
+const { userValidator, logSchema } = require('../validator');
+const { hashSync, compareSync } = require('bcryptjs');
 
 class User {
     constructor(userData) {
@@ -8,6 +9,8 @@ class User {
     save(cb) {
         dbCon('users', async (db) => {
             try {
+                const hashedPass = hashSync(this.userData['password'], 12);
+                this.userData['password'] = hashedPass;
                 await db.insertOne(this.userData);
                 cb();
             } catch (error) {
@@ -52,9 +55,44 @@ class User {
         // console.log(result.error.message);
         return userValidator.validate(userData);
     }
-};
 
-module.exports = User;
+    static login(userData) {
+        return new Promise((resolve, reject) => {
+            // validation
+            const validation = logSchema.validate(userData);
+            if (validation.error) {
+                const error = new Error(validation.error.message);
+                error.statusCode = 400;
+                return resolve(error);
+            }
+
+            dbCon('users', async (db) => {
+                try {
+                    // find user
+                    const user = await db.findOne({ '$or': [{ username: userData['username'] }, { email: userData['username'] }] });
+                    console.log(user);
+                    if (!user || !compareSync(userData['password'], user.password)) {
+                        const error = new Error('Please enter valid username and password');
+                        error.statusCode = 404;
+                        return resolve(error);
+                    }
+                    resolve(user);
+                } catch (err) {
+                    reject(err);
+                }
+            })
+        });
+    }
+}
+User.login({
+    username: 'anas31',
+    password: 'Anas-1234'
+})
+    .then(res => {
+        console.log(res);
+    });
+
+// module.exports = User;
 
 // const user = new User({
 //     username: 'anasSaber',
