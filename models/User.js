@@ -69,8 +69,10 @@ class User {
             dbCon('users', async (db) => {
                 try {
                     // find user
-                    const user = await db.findOne({ '$or': [{ username: userData['username'] }, { email: userData['username'] }] });
-                    console.log(user);
+                    const user = await db.findOne({ '$or': [{ username: userData['username'] }, { email: userData['username'] }] }, {projection:{username: 1,  password: 1}});
+
+                    // console.log(user);
+                    
                     if (!user || !compareSync(userData['password'], user.password)) {
                         const error = new Error('Please enter valid username and password');
                         error.statusCode = 404;
@@ -84,15 +86,15 @@ class User {
         });
     }
 }
-User.login({
-    username: 'anas31',
-    password: 'Anas-1234'
-})
-    .then(res => {
-        console.log(res);
-    });
+// User.login({
+//     username: 'anas31',
+//     password: 'Anas-1234'
+// })
+//     .then(res => {
+//         console.log(res);
+//     });
 
-// module.exports = User;
+module.exports = User;
 
 // const user = new User({
 //     username: 'anasSaber',

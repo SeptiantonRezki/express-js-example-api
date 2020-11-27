@@ -127,3 +127,33 @@
 {"message":"User.validate is not a function","level":"error"}
 {"message":"::1 - - [27/Nov/2020:17:46:40 +0000] \"POST /auth/signup HTTP/1.1\" 500 45 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
 {"message":"::1 - - [27/Nov/2020:17:46:58 +0000] \"POST /auth/signup HTTP/1.1\" 200 48 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Not Found","level":"error"}
+{"message":"::1 - - [27/Nov/2020:17:58:07 +0000] \"POST /user/login HTTP/1.1\" 404 23 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Not Found","level":"error"}
+{"message":"::1 - - [27/Nov/2020:17:58:18 +0000] \"POST /user/login HTTP/1.1\" 404 23 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Not Found","level":"error"}
+{"message":"::1 - - [27/Nov/2020:17:58:31 +0000] \"POST /user/login HTTP/1.1\" 404 23 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"req is not defined","level":"error"}
+{"message":"::1 - - [27/Nov/2020:17:58:45 +0000] \"POST /auth/login HTTP/1.1\" 500 32 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"req is not defined","level":"error"}
+{"message":"::1 - - [27/Nov/2020:17:58:57 +0000] \"POST /auth/login HTTP/1.1\" 500 32 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"\"username\" is required","level":"error"}
+{"message":"::1 - - [27/Nov/2020:17:59:27 +0000] \"POST /auth/login HTTP/1.1\" 400 38 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"Unexpected token } in JSON at position 30","level":"error"}
+{"message":"::1 - - [27/Nov/2020:17:59:37 +0000] \"POST /auth/login HTTP/1.1\" 400 55 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"\"password\" is required","level":"error"}
+{"message":"::1 - - [27/Nov/2020:17:59:42 +0000] \"POST /auth/login HTTP/1.1\" 400 38 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"\"password\" is required","level":"error"}
+{"message":"::1 - - [27/Nov/2020:17:59:53 +0000] \"POST /auth/login HTTP/1.1\" 400 38 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"\"email\" is not allowed","level":"error"}
+{"message":"::1 - - [27/Nov/2020:18:00:06 +0000] \"POST /auth/login HTTP/1.1\" 400 38 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [27/Nov/2020:18:00:13 +0000] \"POST /auth/login HTTP/1.1\" 200 197 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [27/Nov/2020:18:05:37 +0000] \"POST /auth/login HTTP/1.1\" 200 128 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"errno":-4058,"syscall":"open","code":"ENOENT","path":"../private.key","level":"error"}
+{"errno":-4058,"syscall":"open","code":"ENOENT","path":"../private.key","level":"error"}
+{"errno":-4058,"syscall":"open","code":"ENOENT","path":"../private.key","level":"error"}
+{"errno":-4058,"syscall":"open","code":"ENOENT","path":"../private.key","level":"error"}
+{"message":"::1 - - [27/Nov/2020:18:19:57 +0000] \"POST /auth/login HTTP/1.1\" 200 177 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [27/Nov/2020:18:22:39 +0000] \"POST /auth/login HTTP/1.1\" 200 177 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [27/Nov/2020:18:23:18 +0000] \"POST /auth/login HTTP/1.1\" 200 187 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [27/Nov/2020:18:24:33 +0000] \"POST /auth/login HTTP/1.1\" 200 188 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
