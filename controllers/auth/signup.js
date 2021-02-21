@@ -1,5 +1,6 @@
 const { User } = require('../../models');
 const createError = require('http-errors');
+
 const postSignUp = (req, res, next) => {
     const validation = User.validate(req.body);
     if(validation.error){
