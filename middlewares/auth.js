@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
 
     try {
         const decode = jwt.verify(token, secret);
-        req.user = { _id: decode._id, username: decode.username };
+        req.user = { _id: decode._id, username: decode.username };  //yang akan diteruskan ke process selanjutnya
         next();
     } catch (error) {
         next(createError(401));
