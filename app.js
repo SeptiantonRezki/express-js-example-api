@@ -1,3 +1,7 @@
+// V => buat terlebih dahulu routenya, yang bisa di akses oleh link, export masukkan index, export dari index di akses aplikasi
+// C => buat controller nya, yang bisa untuk menyaring/memvalidasi inputan dari user 
+// M => membuat model yang mengakses datanya ke database
+
 const express = require('express');
 const { logger } = require('./configuration');
 const createError = require('http-errors');
@@ -37,3 +41,4 @@ app.use((error, req, res, next) => {
 })
 
 module.exports = app;
+

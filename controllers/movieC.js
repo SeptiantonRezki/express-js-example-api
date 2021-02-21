@@ -3,6 +3,9 @@ const { ObjectId } = require('bson');
 const createError = require('http-errors');
 
 const getMovies = (req, res, next) => {
+
+    // console.log(req.user); dari middeleware auth token
+
     const pageNum = parseInt(req.params.page);
 
     if (isNaN(pageNum)) {
@@ -11,11 +14,12 @@ const getMovies = (req, res, next) => {
     }
 
     const movieToSkip = (pageNum - 1) * 10;
+    
     dbCon('movies', async (db) => {
         try {
             const movies = await db.find({}).skip(movieToSkip).limit(10).toArray();
             res.json(movies);
-        } catch (err) {
+        } catch (err) {S
             next(createError(500));
             // res.status(500).send('Internal Server Error');
         }
@@ -40,8 +44,6 @@ const getOneMovie = (req, res, next) => {
             return next(createError(500));
             // return res.status(500).send('Internal Server Error');
         }
-
-
     });
 };
 
