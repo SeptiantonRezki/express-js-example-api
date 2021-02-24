@@ -2,6 +2,7 @@
 const { getLogin, postLogin } = require('./auth/login');
 const { postSignUp } = require('./auth/signup');
 const { getMovies, getOneMovie } = require('./movieC');
+const { getVerify } = require('./auth/veritification');
 
 module.exports = {
     getLogin,
@@ -9,4 +10,5 @@ module.exports = {
     getMovies,
     getOneMovie,
     postSignUp,
+    getVerify
 };
