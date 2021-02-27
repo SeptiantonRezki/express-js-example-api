@@ -1,8 +1,12 @@
 // di mana untuk handle setiap function dari route tergantung kebutuhna route minta function yang mana
 const { getLogin, postLogin } = require('./auth/login');
 const { postSignUp } = require('./auth/signup');
-const { getMovies, getOneMovie } = require('./movieC');
 const { getVerify } = require('./auth/veritification');
+
+// movies
+const { getMovies, getOneMovie } = require('./movieC');
+// comments
+const { postComment } = require('./commentC');
 
 module.exports = {
     getLogin,
@@ -10,5 +14,6 @@ module.exports = {
     getMovies,
     getOneMovie,
     postSignUp,
-    getVerify
+    getVerify,
+    postComment
 };
