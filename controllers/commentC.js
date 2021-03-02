@@ -23,24 +23,61 @@ const postComment = (req, res, next) => {
     if (error) {
         return next(error);
     }
-    const commentData = { text: req.body['txet'] };
+    const commentData = { text: req.body['text'] };
     commentData.userId = new ObjectId(req.user['_id']);
     commentData.username = req.user['username'];
     commentData.movieId = new ObjectId(req.user['movieId']);
 
     const comment = new Comment(commentData);
-    
-    
+
+
     comment.save().then(() => {
         res.status(201).json({
             message: 'the comment has succesfully created '
         });
-    }).catch((error) => {
+    }).catch((err) => {
         next(createError(500)); //internal server error
     })
 
 
 }
+
+const editComment = (req, res, next) => {
+    if (!ObjectId.isValid(req.params.commentId)) {
+        return next(createError(400)); //bad request
+    }
+    const commentId = new ObjectId(req.params.commentId);
+
+    Comment.edit(commentId, req.body['text'])
+        .then(() => {
+            res.json({
+                message: 'done',
+            });
+        })
+        .catch((err) => {
+            next(createError(500));//internal server error
+        });
+}
+
+const deleteComment = (req, res, next) => {
+    if (!ObjectId.isValid(req.params.commentId)) {
+        return next(createError(400)); //bad request
+    }
+    const commentId = new ObjectId(req.params.commentId);
+
+
+    Comment.delete(commentId)
+        .then(() => {
+            res.json({
+                message: 'done',
+            });
+        })
+        .catch((err) => {
+            next(createError(500));//internal server error
+        });
+}
 module.exports = {
     postComment,
+    editComment,
+    deleteComment
 }

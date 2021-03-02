@@ -6,7 +6,7 @@ const { getVerify } = require('./auth/veritification');
 // movies
 const { getMovies, getOneMovie } = require('./movieC');
 // comments
-const { postComment } = require('./commentC');
+const { postComment, editComment, deleteComment } = require('./commentC');
 
 module.exports = {
     getLogin,
@@ -15,5 +15,7 @@ module.exports = {
     getOneMovie,
     postSignUp,
     getVerify,
-    postComment
+    postComment,
+    editComment,
+    deleteComment
 };

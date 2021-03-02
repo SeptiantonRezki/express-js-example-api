@@ -20,17 +20,41 @@ class Comment {
         return null;
     }
 
-    save(){
+    save() {
         return new Promise((res, rej) => {
             dbCon('comments', async (db) => {
                 try {
                     await db.insertOne(this.data);
                     res();
-                } catch (error) {
+                } catch (err) {
                     rej(err);
                 }
             })
         })
+    }
+    static edit(commentId, text) {
+        return new Promise((res, rej) => {
+            dbCon('comments', async (db) => {
+                try {
+                    await db.updateOne({ _id: commentId }, { '$set': { text }, '$currentDate': { modifiedAt: true } });
+                    res();
+                } catch (err) {
+                    rej(err);
+                }
+            });
+        });
+    }
+    static delete(commentId) {
+        return new Promise((res, rej) => {
+            dbCon('comments', async (db) => {
+                try {
+                    await db.deleteOne({ _id: commentId });
+                    res();
+                } catch (err) {
+                    rej(err);
+                }
+            });
+        });
     }
 }
 module.exports = Comment;
