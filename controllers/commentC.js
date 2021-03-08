@@ -2,6 +2,7 @@ const { ObjectId } = require("bson")
 const createError = require('http-errors');
 const { Comment } = require('../models');
 
+const { dbCon } = require('../configuration');
 
 const postComment = (req, res, next) => {
     //1. data apa saja yang akan kita masukkan ke database
@@ -76,8 +77,37 @@ const deleteComment = (req, res, next) => {
             next(createError(500));//internal server error
         });
 }
+
+const getComments = (req, res, next) => {
+    if (!ObjectId.isValid(req.params.movieId)) {
+        return next(createError(400)); //bad request
+    }
+    const movieId = new ObjectId(req.params.movieId);
+    const pageNum = parseInt(req.params.page);
+
+    if (isNaN(pageNum)) {
+        return next(createError(400));
+    }
+    const commentsToSkip = pageNum * 10;
+
+    dbCon('comments', async (db) => {
+        try {
+            const comments = await db.find({ movieId })
+            .sort({ createdAt: -1 })
+            .skip(commentsToSkip)
+            .limit(10)
+            .toArray();
+            res.json(comments);
+        } catch (error) {
+            next(createError(500)); //internal server error
+        }
+    })
+
+
+}
 module.exports = {
     postComment,
     editComment,
-    deleteComment
+    deleteComment,
+    getComments,
 }

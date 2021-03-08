@@ -22,14 +22,30 @@ class Comment {
 
     save() {
         return new Promise((res, rej) => {
-            dbCon('comments', async (db) => {
+            dbCon('comments', async (db, db2) => {
                 try {
-                    await db.insertOne(this.data);
+                    const comment = await db.insertOne(this.data);
+                    // untuk mendapatkan id dari data yang baru dimasukkan maka harus dimasukkan dalam sebuah variabel terlebih dahulu
+                    this.data['id'] = comment.insertedId;
+                    await db2.updateOne({ _id: this.data['movieId'] }, {
+                        '$push': {
+                            comments: {
+                                '$each': [{ _id: this.data['id'], username: this.data['username'], text: this.data['text'] }],
+                                '$slice': -10
+                            }
+                        }
+                    }
+                    )
+                    //slice digunakan mengurutkan jika -10, maka limit yang di baca hanya 10 saja dan jika - maka yang ditampilkan adalah data yang terbaru
+                    /**
+                     * setelah insert check di collection movies => ada tambahan field comment, check id dan copy
+                     * pindah collection ke comment cari id commnet sesuai yang sudah di copy
+                     */
                     res();
                 } catch (err) {
                     rej(err);
                 }
-            })
+            }, 'movies'); //disini menggunakan collection ke-2
         })
     }
     static edit(commentId, text) {

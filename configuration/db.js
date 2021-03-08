@@ -1,11 +1,18 @@
 const { MongoClient } = require('mongodb');
 
 const _uri = process.env.MONGODB_URI;
-const dbCon = (coll, cb) => {
+
+// disini kita bisa menggunakan 2 collection
+const dbCon = (coll, cb, coll2) => {
     MongoClient.connect(_uri)
     .then(async client => {
+
         const db = client.db('sample_mflix').collection(coll);
-        await cb(db);
+        let db2; // hal ini untuk mencegah apabila config tetapi hanya memakai satu collection saja, sehingga tdak merusak sistem 
+        if(coll2){
+            db2 = client.db('sample_mflix').collection(coll2);
+        }
+        await cb(db, db2);
         client.close();
     });
 };

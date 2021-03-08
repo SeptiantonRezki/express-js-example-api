@@ -2,7 +2,7 @@ const { Router } = require('express');
 const router = Router();
 
 // function yang digunakan dari controller
-const { postComment, editComment, deleteComment } = require('../controllers');
+const { postComment, editComment, deleteComment, getComments } = require('../controllers');
 
 
 // untuk mendapatkan _id dan username
@@ -11,9 +11,10 @@ const { auth } = require('../middlewares');
 
 
 router
-.post('/create-comment/:movieId', auth, postComment)
-.put('/edit-comment/:commentId', auth,  editComment)
-.delete('/delete-comment/:commentId', auth, deleteComment)
+.get('/getComments/:movieId/:page', auth, getComments)
+.post('/createComment/:movieId', auth, postComment)
+.put('/editComment/:commentId', auth,  editComment)
+.delete('/deleteComment/:commentId', auth, deleteComment)
 
 // cara menambahkan komen /** */ => buat "/" kemudian buat "*" dua kali otomatis membuat komen tersebut
 
