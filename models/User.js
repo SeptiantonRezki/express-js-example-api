@@ -6,6 +6,7 @@ class User {
     constructor(userData) {
         this.userData = { ...userData };
     };
+    
     save(cb) {
         dbCon('users', async (db) => {
             try {
@@ -44,7 +45,6 @@ class User {
                 } catch (err) {
                     reject(err);
                 }
-
             });
         });
     }
